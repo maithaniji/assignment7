@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .sec{ 
+            margin: 200px auto;
+            width: 300px;
+            height: 300px;
+            display: block;
+            color: rgb(255, 255, 255);
+            background-color: rgb(121, 121, 121);
+            overflow-y: scroll;
+            /* scroll-behavior: smooth; */
+            
+            box-shadow: 3px 5px 50px 0px black; 
+        }
+        h2{
+            padding: 5px;
+            text-align: center;
+        }
+        .add,.ul{
+            padding: 10px;
+        }
+        .ul{
+            padding: 40px;
+           list-style:disc ; 
+        }
+        
+        button{
+            width: 80px;
+            border: none;
+            border-radius: 20px;
+                      
+        }
+        button:hover{
+            box-shadow: 2px 2px 2px black; 
+            
+        }
+        input{
+            padding: 5px;
+            border-radius: 0%;
+            border: none;
+        }
+
+   
+ul{
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div class=".content">
+        <div class="sec">
+            <h2>To Do List</h2>
+         <div class="add">   
+                <input type="text"  name="List"    class="text" placeholder="enter items">
+                <button class="button">ADD ITEMS</button>
+        </div>
+            <ul class="ul" >
+               
+            </ul>
+        </div>
+
+    </div>
+     <script>
+        
+const inp= document.querySelector('.text');
+const ul=document.querySelector('.ul');
+const btn=document.querySelector('.button')
+
+
+
+btn.onclick=function()
+{
+const List=document.createElement('li');
+
+List.onclick=function()
+{     
+    
+    List.remove();
+    return
+}
+List.innerText=inp.value;
+if(List.innerText!=''){
+ul.append(List);
+}
+}
+     </script>
+</body>
+</html>
